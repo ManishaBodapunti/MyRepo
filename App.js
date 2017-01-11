@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Link } from 'react-router';
 
 import Collection from './collection';
 import Header from './Header';
@@ -31,10 +32,10 @@ class App extends Component {
 			 						</div>
 									<div className="collapse navbar-collapse" id="myNavbar">
 											 <ul className="nav navbar-nav navbar-right">
-													 <li class="active"><a href="#myPage">HOME</a></li>
+													 <li class="active"><Link to="/home">HOME</Link></li>
 													  <li><a href="#collections">COLLECTIONS</a></li>
-														<li><a href="#"><span className="glyphicon glyphicon-user"></span>SIGN UP</a></li>
-														<li><a href="#"><span className="glyphicon glyphicon-log-in"></span>LOGIN</a></li>
+														<li><Link to="/home"><span className="glyphicon glyphicon-user"></span>SIGN UP</Link></li>
+														<li><Link to="/login"><span className="glyphicon glyphicon-log-in"></span>LOGIN</Link></li>
 				 								</ul>
 									</div>
 							</div>

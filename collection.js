@@ -44,7 +44,7 @@ return (
       collections.map(function(item, index){
         return (
         <div className="col-md-4">
-         <div className="img-thumbnail">
+         <div className="poloroid">
           <div className="img-responsive">
             <div className="img-rounded">
               <a href="#"><img  src={item.image} alt="Paris" /></a>
