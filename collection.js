@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
+
 class Collection extends Component {
   constructor() {
-    // In a constructor, call `super` first if the className extends another className
+    // In a constructor, call `super` first if the classNameName extends another classNameName
     super();
   }
 
@@ -16,15 +18,15 @@ class Collection extends Component {
    },
    {
     name:'Frozen Delight',
-    image:require('./images/fd.jpg')
+    image:require('./images/fd1.jpg')
   },
   {
     name:'Street Food',
-    image:require('./images/street.jpg')
+    image:require('./images/street1.jpg')
   },
   {
     name:'Fine Dine',
-    image:require('./images/street.jpg')
+    image:require('./images/dinner.jpeg')
   },
   {
     name:'Barbeque & Grills',
@@ -36,28 +38,123 @@ class Collection extends Component {
   }
   ]
 return (
-  <div className="wrapper1" id="collections">
-    <br />
+  <div id="tf-collection">
+        <div className="container"> 
 
-    <div className="row text-center">
-    {
-      collections.map(function(item, index){
-        return (
-        <div className="col-md-4">
-         <div className="img-thumbnail">
-          <div className="img-responsive">
-            <div className="img-rounded">
-              <a href="#"><img  src={item.image} alt="Paris" /></a>
+            <div className="section-title text-center center">
+                <h2>Take a look at our <strong>Collections</strong></h2>
+                <div className="line">
+                    <hr />
+                </div>
+                <div className="clearfix"></div>
+                
             </div>
-          </div>
-          <p><i>{item.name}</i></p>
-         </div>
+            <div className="space"></div>
+
+            <div id="lightbox" className="row">
+
+                <div className="col-sm-6 col-md-4 col-lg-4 branding">
+                    <div className="portfolio-item">
+                        <div className="hover-bg">
+                            <Link to="/home">
+                                <div className="hover-text">
+                                    <h4>Sunday Brunch</h4>
+                                    
+                                    <div className="clearfix"></div>
+                                    <i className="fa fa-plus"></i>
+                                </div>
+                                <img src={require('./images/sb.jpg')} className="img-responsive" alt="..." />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-sm-6 col-md-4 col-lg-4 photography app">
+                    <div className="portfolio-item">
+                        <div className="hover-bg">
+                            <Link to="/home">
+                                <div className="hover-text">
+                                    <h4>Frozen Delight</h4>
+                                    
+                                    <div className="clearfix"></div>
+                                    <i className="fa fa-plus"></i>
+                                </div>
+                                <img src={require('./images/fd1.jpg')} className="img-responsive" alt="..." />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-sm-6 col-md-4 col-lg-4 branding">
+                    <div className="portfolio-item">
+                        <div className="hover-bg">
+                            <Link to="/home">
+                                <div className="hover-text">
+                                    <h4>Best Breakfast</h4>
+                                    
+                                    <div className="clearfix"></div>
+                                    <i className="fa fa-plus"></i>
+                                </div>
+                                <img src={require('./images/bf.jpg')} className="img-responsive" alt="..." />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-sm-6 col-md-4 col-lg-4 branding">
+                    <div className="portfolio-item">
+                        <div className="hover-bg">
+                            <Link to="/home">
+                                <div className="hover-text">
+                                    <h4>Fine Dine</h4>
+                                    
+                                    <div className="clearfix"></div>
+                                    <i className="fa fa-plus"></i>
+                                </div>
+                                <img src={require('./images/dinner.jpeg')} className="img-responsive" alt="..." />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-sm-6 col-md-4 col-lg-4 web">
+                    <div className="portfolio-item">
+                        <div className="hover-bg">
+                            <Link to="/home">
+                                <div className="hover-text">
+                                    <h4>Barbeque n Grill</h4>
+                                    
+                                    <div className="clearfix"></div>
+                                    <i className="fa fa-plus"></i>
+                                </div>
+                                <img src={require('./images/bb.jpg')} className="img-responsive" alt="..." />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-sm-6 col-md-4 col-lg-4 app">
+                    <div className="portfolio-item">
+                        <div className="hover-bg">
+                            <Link to="/home">
+                                <div className="hover-text">
+                                    <h4>Street Food</h4>
+                                    
+                                    <div className="clearfix"></div>
+                                    <i className="fa fa-plus"></i>
+                                </div>
+                                <img src={require('./images/street1.jpg')} className="img-responsive" alt="..." />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
         </div>
-        )
-      })
-    }
-  </div>
- </div>
+    </div>
+
  );
  }
 }
