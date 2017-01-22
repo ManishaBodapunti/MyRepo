@@ -1,59 +1,48 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
+import Form from './form';
+import Login from './Login';
+import Collection from './collection';
+import Footer from './Footer';
+import Header from './Header';
 import './App.css';
 
-import Collection from './collection';
-import Header from './Header';
 
 // webpack.config.js specifies index.js as the entry point, and
 // index.js imports and renders this `App` component.
-
 class App extends Component {
 	constructor() {
-		// In a constructor, call `super` first if the className extends another className
+		// In a constructor, call `super` first if the className extends another classNameName
 		super();
+    
 	}
-
 	// `render` is called whenever the component's props OR state are updated.
 	render() {
 		// console.log('The App component was rendered')
-	return (
+  return (
 	 <div>
-	 		<div className="App">
-					<nav className="navbar navbar-default navbar-fixed-top">
-							<div className="container-fluid">
-			 						<div className="navbar-header">
-											 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-														<span className="icon-bar"></span>
-														<span className="icon-bar"></span>
-														<span className="icon-bar"></span>                        
-											 </button>
-											<a className="navbar-brand" href="#myPage">Find'O Bistro</a>
-			 						</div>
-									<div className="collapse navbar-collapse" id="myNavbar">
-											 <ul className="nav navbar-nav navbar-right">
-													 <li class="active"><a href="#myPage">HOME</a></li>
-													  <li><a href="#collections">COLLECTIONS</a></li>
-														<li><a href="#"><span className="glyphicon glyphicon-user"></span>SIGN UP</a></li>
-														<li><a href="#"><span className="glyphicon glyphicon-log-in"></span>LOGIN</a></li>
-				 								</ul>
-									</div>
-							</div>
-	 				</nav>
-		</div>
+	 	<Header />
 
-		<div className="App1">
-				<div className="txt">
-				 		<div className="input-group">
-								 <input type="text" placeholder="Hungry??  Find your favourite Bistro...." className="form-control" /> 
-									<span className="input-group-btn">
-									<button className="btn btn-danger" type="button" >
-									<i className="glyphicon glyphicon-search"></i></button>
-									</span>
-						</div>
-				</div>
-		 </div>
-			
-		<Collection />
+    <div id="tf-home" className="text-center">
+        <div className="overlay">
+            <div className="content">
+                <div className="txt">
+				 		       <div className="input-group">
+								       <input type="text" size ="100" placeholder="Hungry??  Find your favourite Bistro...." className="form-control" /> 
+									        <span className="input-group-btn">
+									        <button className="btn btn-warning" >
+									        <i className="fa fa-search"></i></button>
+                          </span>
+ 						       </div>
+				        </div>
+                <a href="#tf-collection" className="fa fa-angle-down page-scroll"></a>
+            </div>
+        </div>
+    </div>
+     
+    <Collection />
+    <div className="text-center"><a href="#tf-home" className="fa fa-angle-up fa-3x"></a></div>
+		<Footer />
 		</div>
 
 		);
